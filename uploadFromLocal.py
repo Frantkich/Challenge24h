@@ -49,7 +49,20 @@
 import requests
 
 def pushAPI(path):
-    myobj = {'path': path}
+    myobj = {
+        "name": null, 
+        "type": null, 
+        "path": path, 
+        "with_product": null,
+        "with_human": null, 
+        "institutional": null, 
+        "format": null,
+        "credits": null, 
+        "user_permissions": null, 
+        "copyright": null,
+        "end_date": null, 
+        "tags": null
+    }
     x = requests.post('https://localhost.com:5000/create', data = myobj)
 
 for dir in os.listdir('pic'):
